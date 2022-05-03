@@ -1,0 +1,47 @@
+---
+import '../styles/normalize.css';
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <slot name="header" />
+	<title>{title}</title>
+</head>
+<body>
+  <section class="marquee"><a href="/">Back to home</a><p>Reminder: This is an unofficial recreation</p></section>
+	<slot />
+</body>
+</html>
+
+<style>
+	* {
+		box-sizing: border-box;
+	}
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .marquee {
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    font-family: system-ui, sans-serif;
+    padding: 0.625rem 2rem;
+  }
+</style>
