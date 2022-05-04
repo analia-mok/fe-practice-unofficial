@@ -1,15 +1,443 @@
 ---
 import ProjectLayout from '../../components/ProjectLayout.astro';
+
+import heroImage from '../../images/pexels-skylar-kang-6368844.jpeg';
+import gridSectionImageOne from '../../images/pexels-dmitry-demidov-3784424.jpeg';
+import gridSectionImageTwo from '../../images/pexels-antoni-shkraba-production-8412278.jpeg';
+import videoThumbnail from '../../images/pexels-greta-hoffman-7859049.jpeg';
+import studioImg from '../../images/pexels-pixabay-164938.jpeg';
+import gridSectionImageThree from '../../images/pexels-alena-darmel-7710047.jpeg';
+import gridSectionImageFour from '../../images/pexels-george-pak-7968283.jpeg';
+import audioMixingImg from '../../images/pexels-pixabay-257904.jpeg';
+
 ---
 
 <ProjectLayout title="Ableton (Unofficial)">
-  <link slot="header" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&amp;display=swap" rel="stylesheet">
+  <link slot="header" href="https://fonts.googleapis.com/css2?family=PT+Sans&amp;display=swap" rel="stylesheet">
 
-  <h1>Ableton Project</h1>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li>
+        <a href="#" class="logo">
+          <span class="visually-hidden">Home</span>
+          <div class="logo__left" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="logo__right" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </a>
+      </li>
+      <li class="nav__list__item"><a href="#">Live</a></li>
+      <li class="nav__list__item"><a href="#">Push</a></li>
+      <li class="nav__list__item"><a href="#">Link</a></li>
+      <li class="nav__list__item"><a href="#">Shop</a></li>
+      <li class="nav__list__item"><a href="#">Packs</a></li>
+      <li class="nav__list__item"><a href="#">Help</a></li>
+      <li class="nav__list__item"><button>More +</button></li>
+    </ul>
+    <ul class="nav__list">
+      <li class="nav__list__item"><a href="#">Try Live for free</a></li>
+      <li class="nav__list__item"><a href="#"><small>Log in or register</small></a></li>
+    </ul>
+  </nav>
+
+  <nav class="nav nav--secondary">
+    <ul class="nav__list">
+      <li class="nav__list__item active"><a href="#">About</a></li>
+      <li class="nav__list__item"><a href="#">Jobs</a></li>
+      <li class="nav__list__item"><a href="#">Apprenticeships</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero__img-container">
+        <img src={heroImage} alt="An acoustic guitar resting on a stand in a home office">
+        <h1>Ableton</h1>
+      </div>
+    </section>
+
+    <section class="text-container">
+      <p class="lead">We make <a href="#">Live</a>, <a href="#">Push</a> and <a href="#">Link</a> — unique software and hardware for music creation and performance. With these products, our community of users creates amazing things.</p>
+      <p>Ableton was founded in 1999 and released the first version of Live in 2001. Our products are used by a community of dedicated musicians, sound designers, and artists from across the world.</p>
+    </section>
+
+    <section class="grid-section-one">
+      <div class="grid-section-one__background" aria-hidden="true"></div>
+      <div class="grid-section-one__img-container__left">
+        <img src={gridSectionImageOne} alt="Close up of an audio mixer">
+      </div>
+      <div class="grid-section-one__img-container__right">
+        <img src={gridSectionImageTwo} alt="A man wearing headphones while singing into a standing microphone.">
+      </div>
+    </section>
+
+    <section class="text-container">
+      <p class="lead">Making music isn't easy. It takes time, effort, and learning. But when you're in the flow, it's incredibly rewarding.</p>
+      <p>We feel the same way about making Ableton products. The driving force behind Ableton is our passion for what we make, and the people we make it for.</p>
+    </section>
+
+    <section class="video-container">
+      <div class="video-player">
+        <img src={videoThumbnail} alt="A smiling woman speaking with a reporter.">
+
+        <button type="button">
+          <div class="visually-hidden">Play Button Placeholder</div>
+        </button>
+      </div>
+
+      <p class="caption">Why Ableton - Greta Hoffman</p>
+    </section>
+
+    <section class="text-container">
+      <p class="lead">We are more than 350 people from 30 different countries divided between our headquarters in Berlin and our offices in Los Angeles and Tokyo.</p>
+      <p>Most of us are active musicians, producers, and DJs, and many of us use Live and Push every day. We come from a wide range of cultural and professional backgrounds. Some of us have PhDs, some are self-taught, and most of us are somewhere in between. What connects us is the shared belief that each of us has the skills and knowledge to contribute to something big: helping to shape the future of music culture.</p>
+    </section>
+
+    <section class="grid-section-two">
+      <div class="grid-section-two__background" aria-hidden="true"></div>
+      <div class="grid-section-two__img-container__left grid-section-two__img-container__left--first">
+        <img src={gridSectionImageThree} alt="A woman writing on a whiteboard covered in yellow sticky notes.">
+      </div>
+      <div class="grid-section-two__img-container__left grid-section-two__img-container__left--second">
+        <img src={gridSectionImageFour} alt="Two backpackers entering a city hostel.">
+      </div>
+      <div class="grid-section-two__img-container__right">
+        <img src={studioImg} alt="A padded room with an audio mixing table and four large standing speakers">
+      </div>
+    </section>
+
+    <section class="text-container">
+      <p class="lead">We believe it takes focus to create truly outstanding instruments. We only work on a few products and we strive to make them great.</p>
+      <p>Rather than having a one-size-fits-all process, we try to give our people what they need to work their magic and grow. We've learned that achieving the best results comes from building teams that are richly diverse, and thus able to explore problems from a wider set of perspectives. We don't always agree with each other, but opinion and debate are valued and openly encouraged.</p>
+    </section>
+
+    <section class="img-container">
+      <img src={audioMixingImg} alt="Desktop monitor with an audio mixing program open.">
+    </section>
+
+    <section class="text-container">
+      <p class="lead">We're passionate about what we do, but we're equally passionate about improving who we are.</p>
+      <p>We work hard to foster an environment where people can grow both personally and professionally, and we strive to create a wealth of opportunities to learn from and with each other.</p>
+      <p>Alongside an internal training program, employees are actively supported in acquiring new knowledge and skills, and coached on applying these in their daily work. In addition, staff-organized development and music salons are a chance to discuss new technologies, production techniques and best practices.</p>
+    </section>
+  </main>
 </ProjectLayout>
 
-<style>
-  html {
-    font-family: 'Open Sans', sans-serif;
+<style lang="scss">
+  :root {
+    --yellow: #fbffa7;
+    --orange: #ff764d;
+    --burnt-orange: #fd5948;
+    --light-blue: #b1c5ff;
+    --blue: #0000ff;
+    --green: #b6ffc0;
+    --purple: #d5b3ff;
+    --light-gray: #eee;
+
+    --font-sans: 'PT Sans', sans-serif;
   }
+
+  html {
+    font-family: var(--font-sans);
+  }
+
+  a {
+    color: var(--blue);
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .lead {
+    font-size: 1.875rem;
+    font-weight: 600;
+  }
+
+  .logo {
+    display: flex;
+    gap: 4px;
+    height: 28px;
+    width: 60px;
+
+    &__left,
+    &__right {
+      display: flex;
+      flex: 1 1 50%;
+      gap: 4px;
+
+      span {
+        background-color: black;
+        display: inline-block;
+        flex: 1 1 100%;
+        height: 100%;
+        width: 4px;
+      }
+    }
+
+    &__right {
+      flex-direction: column;
+
+      span {
+        height: 4px;
+        width: 100%;
+      }
+    }
+  }
+
+  .nav {
+    background: white;
+    border-bottom: 2px solid #efefef;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 2.5rem;
+    margin: 0 auto;
+
+    $this: &;
+
+    button {
+      color: var(--orange);
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
+      border-color: transparent;
+      background-color: transparent;
+    }
+
+    &__list {
+      align-items: center;
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      &__item {
+        padding: 0;
+        margin: 0;
+        font-size: 1.25rem;
+
+        a {
+          color: black;
+          font-weight: 500;
+
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            color: var(--blue);
+          }
+        }
+
+        &.active {
+          a {
+            color: var(--orange);
+          }
+        }
+      }
+    }
+
+    &--secondary {
+      background-color: rgba(255, 255, 255, .95);
+      border-bottom: 0;
+      position: sticky;
+      top: -1px;
+      z-index: 20;
+
+      #{$this}__list {
+        &__item {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .hero {
+    display: block;
+
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    h1 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      color: var(--burnt-orange);
+      font-weight: 600;
+      font-size: 8rem;
+    }
+
+    &__img-container {
+      margin: 0 auto;
+      height: calc(100vh - 120px);
+      max-width: 1200px;
+      position: relative;
+    }
+  }
+
+  .text-container {
+    display: block;
+    margin: 100px auto;
+
+    @media screen and (min-width: 992px) {
+      margin: 120px auto;
+      max-width: 80ch;
+    }
+  }
+
+  .img-container {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    img {
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  .video-container {
+    text-align: center;
+
+    .caption {
+      margin: 0 auto;
+      max-width: 768px;
+      text-align: left;
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .video-player {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+
+    img {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      max-width: 768px;
+    }
+
+    button {
+      display: inline-block;
+      border-color: transparent;
+      background-color: var(--blue);
+      height: 80px;
+      width: 80px;
+      border-radius: 9999px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+
+      &::after {
+        content: '';
+        color: white;
+        width: 0;
+        height: 0;
+        display: inline-block;
+
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 20px solid white;
+        margin-left: 6px;
+      }
+    }
+  }
+
+  .grid-section-one {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    max-width: 100%;
+
+    &__background {
+      grid-area: 1 / 6 / 8 / 13;
+      background-color: var(--yellow);
+    }
+
+    &__img-container {
+      &__left {
+        grid-area: 2 / 2 / 7 / 7;
+
+        img {
+          aspect-ratio: 1 / 1;
+        }
+      }
+
+      &__right {
+        grid-area: 3 / 8 / 6 / 12;
+
+        img {
+          aspect-ratio: 4 / 3;
+        }
+      }
+    }
+  }
+
+  .grid-section-two {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    max-width: 100%;
+
+    &__background {
+      grid-area: 1 / 1 / 10 / 8;
+      background-color: var(--green);
+    }
+
+    &__img-container {
+      &__left {
+        img {
+          aspect-ratio: 4 / 3;
+        }
+
+        &--first {
+          grid-area: 2 / 2 / 5 / 6;
+        }
+
+        &--second {
+          grid-area: 6 / 2 / 9 / 6;
+        }
+      }
+
+      &__right {
+        grid-area: 3 / 7 / 8 / 12;
+
+        img {
+          aspect-ratio: 1 / 1;
+        }
+      }
+    }
+  }
+
 </style>
