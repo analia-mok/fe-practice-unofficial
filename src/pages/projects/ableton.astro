@@ -178,7 +178,7 @@ import coworkingSpaceImg from '../../images/pexels-marc-mueller-380769.jpeg';
         <div class="footer__nav-form">
           <h3>Sign up to our newsletter</h3>
           <p>Enter your email address to stay up to date with the latest offers, tutorials, downloads, surveys and more.</p>
-          <form action="#">
+          <form action="#" class="signup-form">
             <label for="email" class="visually-hidden">Email Address</label>
             <input type="text" name="email" id="email" placeholder="Email Address">
 
@@ -249,6 +249,7 @@ import coworkingSpaceImg from '../../images/pexels-marc-mueller-380769.jpeg';
 </ProjectLayout>
 
 <style lang="scss">
+  /* I switched to scss pretty early but for some reason still stuck with css vars? */
   :root {
     --yellow: #fbffa7;
     --orange: #ff764d;
@@ -361,9 +362,14 @@ import coworkingSpaceImg from '../../images/pexels-marc-mueller-380769.jpeg';
       padding: 0;
 
       &__item {
+        display: none;
         padding: 0;
         margin: 0;
         font-size: 1.25rem;
+
+        @media screen and (min-width: 992px) {
+          display: block;
+        }
 
         a {
           color: black;
@@ -431,7 +437,7 @@ import coworkingSpaceImg from '../../images/pexels-marc-mueller-380769.jpeg';
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      gap: 20px 10px;
+      gap: 60px 10px;
       max-width: 100%;
 
       p {
@@ -485,6 +491,19 @@ import coworkingSpaceImg from '../../images/pexels-marc-mueller-380769.jpeg';
 
     &__country-lang-picker {
       grid-area: 2 / 8 / 3 / 13;
+
+      select {
+        font-size: 1rem;
+        background-color: var(--light-gray);
+        color: black;
+        border-color: transparent;
+        font-family: var(--font-sans);
+        padding: 5px 10px;
+
+        &:last-child {
+          width: 25ch;
+        }
+      }
     }
 
     &__secondary-nav {
@@ -543,6 +562,29 @@ import coworkingSpaceImg from '../../images/pexels-marc-mueller-380769.jpeg';
         }
       }
     }
+
+    .signup-form {
+      display: flex;
+
+      input[type=text] {
+        background-color: var(--light-gray);
+        border-color: transparent;
+        padding: 10px;
+        font-family: var(--font-sans);
+        flex: 1;
+        font-size: 1rem;
+      }
+
+      input[type=submit] {
+        background-color: var(--blue);
+        color: white;
+        border-color: transparent;
+        font-family: var(--font-sans);
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: not-allowed;
+      }
+    }
   }
 
   .hero {
@@ -577,19 +619,25 @@ import coworkingSpaceImg from '../../images/pexels-marc-mueller-380769.jpeg';
   .text-container {
     display: block;
     margin: 100px auto;
+    padding: 0 15px;
 
     @media screen and (min-width: 992px) {
       margin: 120px auto;
+      padding: 0;
       max-width: 80ch;
     }
   }
 
   .img-container {
     display: block;
-    max-width: 1100px;
     margin: 0 auto;
 
+    @media screen and (min-width: 992px) {
+      max-width: 1100px;
+    }
+
     img {
+      width: 100%;
       aspect-ratio: 16 / 9;
     }
   }
@@ -616,6 +664,7 @@ import coworkingSpaceImg from '../../images/pexels-marc-mueller-380769.jpeg';
       aspect-ratio: 16 / 9;
       object-fit: cover;
       max-width: 768px;
+      width: 100%;
     }
 
     button {

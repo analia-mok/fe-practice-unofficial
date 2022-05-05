@@ -1,5 +1,6 @@
 ---
 import Layout from '../components/Layout.astro';
+import CheckboxIcon from '../components/CheckboxIcon.astro';
 ---
 
 <Layout title="Welcome to Analia's Frontend Practice">
@@ -8,9 +9,17 @@ import Layout from '../components/Layout.astro';
 		<p>
 			Listed below are Analia's implementations for projects found on <a href="https://www.frontendpractice.com/projects">Frontend Practice</a>
 		</p>
-		<ul>
-			<li><a href="/projects/ableton">Ableton</a></li>
-		</ul>
+		<section class="projects">
+			<article about="/projects/ableton">
+				<header>
+					<h2><a href="/projects/ableton">Ableton</a></h2>
+				</header>
+				<ul class="projects__tags">
+					<li><CheckboxIcon checked="true" label="Ableton desktop design has been implemented" />Desktop</li>
+					<li><CheckboxIcon label="Ableton mobile design has not been implemented" />Mobile</li>
+				</ul>
+			</article>
+		</section>
 	</main>
 </Layout>
 
@@ -22,5 +31,52 @@ import Layout from '../components/Layout.astro';
 	main {
 		max-width: 60ch;
 		margin: 100px auto;
+	}
+
+	.projects {
+		margin: 4rem 0 0;
+		padding: 0;
+	}
+
+	.projects article {
+		--shadow-color: 0deg 0% 63%;
+
+		border: 1px solid #efefef;
+		/* Generated from https://www.joshwcomeau.com/shadow-palette/ */
+		box-shadow:
+			0.5px 0.5px 0.8px hsl(var(--shadow-color) / 0.36),
+			1.5px 1.6px 2.5px -0.8px hsl(var(--shadow-color) / 0.36),
+			3.8px 4px 6.2px -1.7px hsl(var(--shadow-color) / 0.36),
+			9.3px 9.8px 15.2px -2.5px hsl(var(--shadow-color) / 0.36);;
+		margin-bottom: 2rem;
+		position: relative;
+	}
+
+	.projects article h2 {
+		margin: 0;
+		font-size: 1.25rem;
+	}
+
+	.projects a {
+		display: block;
+		padding: 1.5rem;
+		color: darkblue;
+	}
+
+	.projects__tags {
+		display: flex;
+		gap: 1.5rem;
+		align-items: center;
+		align-content: center;
+		list-style: none;
+		padding: 0;
+		margin: 0 1.5rem 1rem;
+	}
+
+	.projects__tags li {
+		display: inline-flex;
+		align-items: center;
+		align-content: center;
+		gap: 0.25rem;
 	}
 </style>
