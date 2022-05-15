@@ -1,0 +1,323 @@
+---
+import ArrowRightIcon from "../../components/ArrowRightIcon.astro";
+import ProjectLayout from "../../components/ProjectLayout.astro";
+---
+
+<ProjectLayout title="Abstract (Unofficial)">
+  <link slot="header" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+  <nav class="nav">
+    <div class="nav__logo"><strong>Abstract</strong> | Help Center</div>
+    <ul class="nav__links nav__links--mobile">
+      <!-- TODO: Encapsulate svgs to own component -->
+      <!-- TODO: Add aria labels -->
+      <li><button><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" width="24" height="24"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg></button></li>
+      <li><button><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" width="24" height="24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg></button></li>
+    </ul>
+    <ul class="nav__links nav__links--desktop">
+      <li>
+        <a href="#" class="button-link button-link--outline">Submit a Request</a>
+      </li>
+      <li>
+        <a href="#" class="button-link">Sign In</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <section class="hero bg-light-purple">
+      <header>
+        <h1>How can we help?</h1>
+        <form action="#">
+          <label for="search" class="visually-hidden">Search</label>
+          <input type="text" name="search" id="search" placeholder="Search">
+
+          <button type="submit">
+            <ArrowRightIcon label="Submit" width={28} height={28} />
+          </button>
+        </form>
+      </header>
+    </section>
+    <section class="bg-white">
+      <div class="container">
+        <article class="feature-card">
+          <div class="feature-card__img">
+            <!-- Insert image later -->
+          </div>
+          <div class="feature-card__content">
+            <h2>Using Abstract</h2>
+            <p>Abstract lets you manage, version, and document your designs in one place.</p>
+            <a href="#" class="feature-card__link">Learn More <ArrowRightIcon /></a>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__img">
+            <!-- Insert image later -->
+          </div>
+          <div class="feature-card__content">
+            <h2>Manage your account</h2>
+            <p>Configure your account settings, such as your email, profile details, and password.</p>
+            <a href="#" class="feature-card__link">Learn More <ArrowRightIcon /></a>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__img">
+            <!-- Insert image later -->
+          </div>
+          <div class="feature-card__content">
+            <h2>Manage organizations, teams, and projects</h2>
+            <p>Use Abstract organizations, teams, and projects to organize your people and your work.</p>
+            <a href="#" class="feature-card__link">Learn More <ArrowRightIcon /></a>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__img">
+            <!-- Insert image later -->
+          </div>
+          <div class="feature-card__content">
+            <h2>Manage billing</h2>
+            <p>Change subscriptions and payment details.</p>
+            <a href="#" class="feature-card__link">Learn More <ArrowRightIcon /></a>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__img">
+            <!-- Insert image later -->
+          </div>
+          <div class="feature-card__content">
+            <h2>Authenticate to Abstract</h2>
+            <p>Set up and configure SSO, SCIM, and Just-in-Time provisioning.</p>
+            <a href="#" class="feature-card__link">Learn More <ArrowRightIcon /></a>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__img">
+            <!-- Insert image later -->
+          </div>
+          <div class="feature-card__content">
+            <h2>Abstract support</h2>
+            <p>Get in touch with a human.</p>
+            <a href="#" class="feature-card__link">Learn More <ArrowRightIcon /></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <a href="#" class="floating-help-widget">Get Help</a>
+  </main>
+  <footer>
+    <div class="footer__col">
+      <div class="footer__nav">
+        <h2>Abstract</h2>
+        <ul>
+          <li><a href="#">Start Trial</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Download</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav">
+        <h2>Resources</h2>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Release Notes</a></li>
+          <li><a href="#">Status</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav">
+        <h2>Community</h2>
+        <ul>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Dribbble</a></li>
+          <li><a href="#">Podcast</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav">
+        <strong>Contact Us</strong>
+        <ul>
+          <li><a href="#">info@email.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__col">
+      <div>
+        <p>&copy; Copyright 2022</p>
+        <p>Abstract Studio Design, Inc.</p>
+        <p>All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+</ProjectLayout>
+
+<style lang="scss">
+$font-sans: 'Open Sans', sans-serif;
+$purple: #4C5FD5;
+$light-purple: #dadbf1;
+$black: #000000;
+$white: #ffffff;
+$tablet: 768px;
+$desktop: 1200px;
+
+html,
+body {
+  font-family: $font-sans;
+}
+
+a {
+  color: $purple;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.bg-light-purple {
+  background-color: $light-purple;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav,
+footer {
+  background-color: $black;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  font-size: 20px;
+  position: sticky;
+  top: 0;
+  padding: 1.5rem 1rem;
+
+  $nav: &;
+
+  &__logo {
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &__links {
+    &--mobile {
+      display: flex;
+      gap: 0.5rem;
+
+      @media screen and (min-width: $tablet) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media screen and (min-width: $tablet) {
+        display: flex;
+      }
+    }
+
+    button {
+      background-color: transparent;
+      border-color: transparent;
+      color: $white;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+
+      svg {
+        fill: $white;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &:hover {
+        svg {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+
+  h1 {
+    font-weight: 600;
+    font-size: 3.5rem;
+  }
+
+  form {
+    display: block;
+    position: relative;
+    margin-top: 2.75rem;
+
+    $form: &;
+
+    input {
+      display: block;
+      border-radius: 4px;
+      border: 1px solid $black;
+      width: 100%;
+      padding: 1.2rem 1rem;
+      font-size: 1.25rem;
+      font-weight: 400;
+
+      &:hover,
+      &:focus-within {
+        border-color: $purple;
+        outline-color: $purple;
+
+        #{$form} svg {
+          fill: $purple;
+        }
+      }
+    }
+
+    button {
+      background-color: transparent;
+      border-color: transparent;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      margin: 0;
+      padding: 0;
+      width: 28px;
+      height: 28px;
+
+      &:hover,
+      &:focus {
+        svg {
+          fill: $light-purple;
+        }
+      }
+    }
+  }
+}
+</style>

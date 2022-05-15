@@ -1,6 +1,9 @@
 ---
 import Layout from '../components/Layout.astro';
 import CheckboxIcon from '../components/CheckboxIcon.astro';
+
+let projects = await Astro.glob('../meta/*.md');
+
 ---
 
 <Layout title="Welcome to Analia's Frontend Practice">
@@ -10,15 +13,23 @@ import CheckboxIcon from '../components/CheckboxIcon.astro';
 			Listed below are Analia's implementations for projects found on <a href="https://www.frontendpractice.com/projects">Frontend Practice</a>
 		</p>
 		<section class="projects">
-			<article about="/projects/ableton">
-				<header>
-					<h2><a href="/projects/ableton">Ableton</a></h2>
-				</header>
-				<ul class="projects__tags">
-					<li><CheckboxIcon checked="true" label="Ableton desktop design has been implemented" />Desktop</li>
-					<li><CheckboxIcon label="Ableton mobile design has not been implemented" />Mobile</li>
-				</ul>
-			</article>
+			{projects.map(p => (
+				<article about={p.frontmatter.path}>
+					<header>
+						<h2><a href={p.frontmatter.path}>{p.frontmatter.title}</a></h2>
+					</header>
+					<ul class="projects__tags">
+						<li>
+							<CheckboxIcon checked={p.frontmatter.desktop} label={`${p.frontmatter.title} desktop design has ${p.frontmatter.desktop ? '' : 'not'} been implemented`} />
+							Desktop
+						</li>
+						<li>
+							<CheckboxIcon checked={p.frontmatter.mobile} label={`${p.frontmatter.title} mobile design has ${p.frontmatter.mobile ? '' : 'not'} been implemented`} />
+							Mobile
+						</li>
+					</ul>
+				</article>
+			))}
 		</section>
 	</main>
 </Layout>
